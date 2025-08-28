@@ -11,14 +11,31 @@ int main(int argc, char *argv[]) {
     int w = atoi(argv[2]);
     const char *filename = argv[3];
 
-    FILE *f = fopen(filename, "wb");
-    if (!f) { perror("Erro"); return 1; }
+    FILE *file = fopen(filename, "wb");
+    if (!file) { 
+        perror("Erro"); 
+        return 1; 
+    }
+
+    /*
+    float matrix[] = {
+        0.111, 0.112, 0.113, 0.114, 0.115, 0.116, 0.117, 0.118,
+        0.119, 0.120, 0.121, 0.122, 0.123, 0.124, 0.125, 0.126,
+        0.127, 0.128, 0.129, 0.130, 0.131, 0.132, 0.133, 0.134,
+        0.135, 0.136, 0.137, 0.138, 0.139, 0.140, 0.141, 0.142,
+        0.143, 0.144, 0.145, 0.146, 0.147, 0.148, 0.149, 0.150,
+        0.151, 0.152, 0.153, 0.154, 0.155, 0.156, 0.157, 0.158,
+        0.159, 0.160, 0.161, 0.162, 0.163, 0.164, 0.165, 0.166,
+        0.167, 0.168, 0.169, 0.170, 0.171, 0.172, 0.173, 0.174
+    };
+    */
 
     for (int i = 0; i < h*w; i++) {
         float val = (float)(i+1); // números 1,2,3,...
-        fwrite(&val, sizeof(float), 1, f);
+        fwrite(&val, sizeof(float), 1, file);
+        //fwrite(&matrix[i], sizeof(float), 1, file);
     }
 
-    fclose(f);
+    fclose(file);
     return 0;
 }
