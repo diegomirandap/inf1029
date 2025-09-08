@@ -1,0 +1,21 @@
+Algoritmo antigo:
+
+1024x1024:
+scalar_matrix_mult: 2.697000 ms
+matrix_matrix_mult: 5823.393066 ms
+Overall time: 5842.039062 ms
+
+2048x2048:
+scalar_matrix_mult: 9.120000 ms
+matrix_matrix_mult: 295312.031250 ms
+Overall time: 295417.437500 ms
+
+
+Algoritmo otimizado:
+
+1024x1024:
+
+
+2048x2048:
+
+
