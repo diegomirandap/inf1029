@@ -13,14 +13,16 @@ int matrix_matrix_mult(struct matrix* matrixA, struct matrix* matrixB, struct ma
     if (matrixA->width != matrixB->height || matrixC->height != matrixA->height || matrixC->width != matrixB->width) 
         return 0;
 
+    // Verificar se é necessário forçar a inicialização como 0 (dentro ou fora do alg), ou se ele já está realmente gerando como 0
+
     for(unsigned long int i = 0; i < matrixA->height; i++){
-        for(unsigned long int k = 0; k < matrixA->width; k++){
-            
-            float aik = matrixA->rows[i * matrixA->width + k]; // Escalar para reuso
-            
+        for(unsigned long int k = 0; k < matrixA->width; k++){  
+            //inicializar o vetor C como 0
+            matrixC->rows[i * matrixC->width + k] = 0;
             for (unsigned long int j = 0; j < matrixB->width; j++){
-                // 3. Acesso por LINHA em B (eficiente para o cache)
-                matrixC->rows[i * matrixC->width + j] += aik * matrixB->rows[k * matrixB->width + j];
+                // acesso final por linha de B               
+                // casa de C += casa Aik * cada um da linha de B
+                matrixC->rows[i * matrixC->width + j] += matrixA->rows[i * matrixA->width + k] * matrixB->rows[k * matrixB->width + j];
             }
         }
     }

@@ -67,10 +67,10 @@ Overall time: 273931.437500 ms
 
 novo otimizado
 1024
-scalar_matrix_mult: 3.870000 ms
-matrix_matrix_mult: 4172.549805 ms
-Overall time: 4206.613770 ms
+scalar_matrix_mult: 24.552999 ms
+matrix_matrix_mult: 5398.152832 ms
+Overall time: 5461.361816 ms
 2048
-scalar_matrix_mult: 10.207000 ms
-matrix_matrix_mult: 32922.070312 ms
-Overall time: 32977.578125 ms
+scalar_matrix_mult: 49.290001 ms
+matrix_matrix_mult: 47889.605469 ms
+Overall time: 48046.277344 ms
