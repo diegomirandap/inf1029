@@ -46,31 +46,37 @@ int main (int argc, char* argv[]){
     load_matrix(floats1, &A);
     load_matrix(floats2, &B);
 
-    /*//////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
     printf("----------Matrix A - Primeiros 256 termos----------\n");
-    for(int i = 0; i < 256; i++){
+    for(int i = 0; i < A.height * A.width; i++){
         printf("%f ", A.rows[i]);
         if (i%A.width==A.width-1)
             printf("\n");
+        if (i==255)
+            break;
     }
-    printf("---------------------------------------------------\n");
+    printf("\n---------------------------------------------------\n");
 
     printf("----------Matrix B - Primeiros 256 termos----------\n");
     for(int i = 0; i < B.height * B.width; i++){
         printf("%f ", B.rows[i]);
         if (i%B.width==B.width-1)
             printf("\n");
+        if (i==255)
+            break;
     }
-    printf("---------------------------------------------------\n");
+    printf("\n---------------------------------------------------\n");
 
     printf("----------Matrix C - Primeiros 256 termos----------\n");
     for(int i = 0; i < C.height * C.width; i++){
         printf("%f ", C.rows[i]);
         if (i%C.width==C.width-1)
             printf("\n");
+        if (i==255)
+            break;
     }
-    printf("---------------------------------------------------\n\n\n\n");
-    //////////////////////////////////////////////////////////////////////////*/
+    printf("\n---------------------------------------------------\n\n\n\n");
+    //////////////////////////////////////////////////////////////////////////
 
     gettimeofday(&overall_t1, NULL);
 
@@ -90,31 +96,37 @@ int main (int argc, char* argv[]){
     printf("Overall time: %f ms\n", timedifference_msec(overall_t1, overall_t2));
     
     
-    /*//////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
     printf("\n\n\n----------Matrix A - Primeiros 256 termos----------\n");
     for(int i = 0; i < A.height * A.width; i++){
         printf("%f ", A.rows[i]);
         if (i%A.width==A.width-1)
-        printf("\n");
+            printf("\n");
+        if (i==255)
+            break;
     }
-    printf("---------------------------------------------------\n");
+    printf("\n---------------------------------------------------\n");
     
     printf("----------Matrix B - Primeiros 256 termos----------\n");
     for(int i = 0; i < B.height * B.width; i++){
         printf("%f ", B.rows[i]);
         if (i%B.width==B.width-1)
-        printf("\n");
+            printf("\n");
+        if (i==255)
+            break;
     }
-    printf("---------------------------------------------------\n");
+    printf("\n---------------------------------------------------\n");
     
     printf("----------Matrix C - Primeiros 256 termos----------\n");
     for(int i = 0; i < C.height * C.width; i++){
         printf("%f ", C.rows[i]);
         if (i%C.width==C.width-1)
-        printf("\n");
+            printf("\n");
+        if (i==255)
+            break;
     }
-    printf("---------------------------------------------------\n");
-    //////////////////////////////////////////////////////////////////////////*/
+    printf("\n---------------------------------------------------\n");
+    //////////////////////////////////////////////////////////////////////////
     
     free(A.rows);
     free(B.rows);

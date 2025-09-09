@@ -1,4 +1,19 @@
-Algoritmo antigo:
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          39 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   12
+  On-line CPU(s) list:    0-11
+Vendor ID:                GenuineIntel
+  Model name:             Intel(R) Core(TM) 7 150U
+    CPU family:           6
+    Model:                186
+    Thread(s) per core:   2
+    Core(s) per socket:   6
+    Socket(s):            1
+
+
+Algoritmo otimizado:
 
 1024x1024:
 scalar_matrix_mult: 2.697000 ms
@@ -11,11 +26,51 @@ matrix_matrix_mult: 295312.031250 ms
 Overall time: 295417.437500 ms
 
 
-Algoritmo otimizado:
+Algoritmo antigo:
 
 1024x1024:
-
+scalar_matrix_mult: 2.667000 ms
+matrix_matrix_mult: 6181.303223 ms
+Overall time: 6203.887207 ms
 
 2048x2048:
+scalar_matrix_mult: 7.338000 ms
+matrix_matrix_mult: 207934.546875 ms
+Overall time: 208019.390625 ms
 
 
+
+
+
+
+antigo 
+1024
+scalar_matrix_mult: 3.069000 ms
+matrix_matrix_mult: 5989.320801 ms
+Overall time: 6020.512207 ms
+
+2048
+scalar_matrix_mult: 7.360000 ms
+matrix_matrix_mult: 254245.859375 ms
+Overall time: 254316.250000 ms
+
+novo?????????????????????
+1024
+scalar_matrix_mult: 4.758000 ms
+matrix_matrix_mult: 6540.424805 ms
+Overall time: 6564.526855 ms
+2048
+scalar_matrix_mult: 10.353000 ms
+matrix_matrix_mult: 273862.656250 ms
+Overall time: 273931.437500 ms
+
+
+novo otimizado
+1024
+scalar_matrix_mult: 3.870000 ms
+matrix_matrix_mult: 4172.549805 ms
+Overall time: 4206.613770 ms
+2048
+scalar_matrix_mult: 10.207000 ms
+matrix_matrix_mult: 32922.070312 ms
+Overall time: 32977.578125 ms
