@@ -1,4 +1,6 @@
-//matrix_lib_test 5.0 8 16 16 8 floats_256_2.0f.dat floats_256_5.0f.dat result1.dat result2.dat
+//INF-1029 - Trabalho 1
+//Diego Miranda - 2210996
+//Felipe Cancella - 2210487
 #include "matrix_lib.h"
 #include "timer.h"
 #include <stdio.h>
@@ -49,6 +51,7 @@ int main (int argc, char* argv[]){
     load_matrix(floats2, &B);
 
     //////////////////////////////////////////////////////////////////////////
+    printf("Antes:");
     printf("----------Matrix A - Primeiros 256 termos----------\n");
     for(int i = 0; i < A.height * A.width; i++){
         printf("%f ", A.rows[i]);
@@ -91,6 +94,7 @@ int main (int argc, char* argv[]){
     gettimeofday(&stop2, NULL);
     
     //////////////////////////////////////////////////////////////////////////
+    printf("Depois:")
     printf("\n\n\n----------Matrix A - Primeiros 256 termos----------\n");
     for(int i = 0; i < A.height * A.width; i++){
         printf("%f ", A.rows[i]);

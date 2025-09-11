@@ -1,3 +1,6 @@
+//INF-1029 - Trabalho 1
+//Diego Miranda - 2210996
+//Felipe Cancella - 2210487
 struct matrix {
     unsigned long int height;
     unsigned long int width;

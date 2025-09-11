@@ -1,3 +1,6 @@
+//INF-1029 - Trabalho 1
+//Diego Miranda - 2210996
+//Felipe Cancella - 2210487
 #include "matrix_lib.h"
 
 int scalar_matrix_mult(float scalar_value, struct matrix* matrix){
