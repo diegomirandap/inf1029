@@ -1,0 +1,14 @@
+*.o
+*.ko
+*.obj
+*.elf
+*.dat
+
+create_matrix
+matrix_lib_test
+resultado1.dat
+resultado2.dat
+floats_256_2.0f.dat
+floats_256_5.0f.dat
+timer_test
+
