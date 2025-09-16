@@ -94,7 +94,7 @@ int main (int argc, char* argv[]){
     gettimeofday(&stop2, NULL);
     
     //////////////////////////////////////////////////////////////////////////
-    printf("Depois:")
+    printf("Depois:");
     printf("\n\n\n----------Matrix A - Primeiros 256 termos----------\n");
     for(int i = 0; i < A.height * A.width; i++){
         printf("%f ", A.rows[i]);
