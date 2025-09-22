@@ -29,3 +29,17 @@ gcc -o matrix_lib_test matrix_lib_test.c matrix_lib.c timer.c
 ./create_matrix 2048 2048 floats_256_2.0f.dat
 ./create_matrix 2048 2048 floats_256_5.0f.dat
 ./matrix_lib_test 5.0 2048 2048 2048 2048 "floats_256_2.0f.dat" "floats_256_5.0f.dat" "result1.dat" "result2.dat"
+
+
+Trabalho 2:
+
+sequência de exibição segundo o roteiro:
+gcc -o create_matrix create_matrix.c
+./create_matrix 1024 1024 floats_256_2.0f.dat
+./create_matrix 1024 1024 floats_256_5.0f.dat
+gcc -std=c11 -mfma -o matrix_lib_test matrix_lib_test.c matrix_lib.c timer.c
+./matrix_lib_test 5.0 1024 1024 1024 1024 "floats_256_2.0f.dat" "floats_256_5.0f.dat" "result1.dat" "result2.dat"
+
+./create_matrix 2048 2048 floats_256_2.0f.dat
+./create_matrix 2048 2048 floats_256_5.0f.dat
+./matrix_lib_test 5.0 2048 2048 2048 2048 "floats_256_2.0f.dat" "floats_256_5.0f.dat" "result1.dat" "result2.dat"
