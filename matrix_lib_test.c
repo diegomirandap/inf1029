@@ -1,4 +1,4 @@
-//INF-1029 - Trabalho 1
+//INF-1029 - Trabalho 2
 //Diego Miranda - 2210996
 //Felipe Cancella - 2210487
 #include "matrix_lib.h"
@@ -10,7 +10,6 @@ void load_matrix(char* filename, struct matrix* m){
     FILE* f = fopen(filename, "rb");
     if (!f)
         exit(0);
-    //tem como aproveitar esta lógica, ou deve ser feita com as instruções __mm256?
     fread(m->rows, sizeof(float), m->height * m->width, f);
     fclose(f);
 }
@@ -20,7 +19,6 @@ void save_matrix(char* filename, struct matrix* m){
     if (!f)
         exit(0);
     fwrite(m->rows, sizeof(float), m->height * m->width, f);
-    //tem como aproveitar esta lógica, ou deve ser feita com as instruções __mm256?
     fclose(f);
 }
 
@@ -51,7 +49,6 @@ int main (int argc, char* argv[]){
     
     load_matrix(floats1, &A);
     load_matrix(floats2, &B);
-    //tem como aproveitar esta lógica, ou deve ser feita com as instruções __mm256?
 
     //////////////////////////////////////////////////////////////////////////
     printf("Antes:");

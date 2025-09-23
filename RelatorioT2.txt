@@ -1,0 +1,10 @@
+PREVIA
+1024x1024:
+scalar_matrix_mult: 8.809000 ms
+matrix_matrix_mult: 1147.433960 ms
+Overall time: 1226.130005 ms
+
+2048x2048:
+scalar_matrix_mult: 21.768982 ms
+matrix_matrix_mult: 6722.091797 ms
+Overall time: 6787.023926 ms
