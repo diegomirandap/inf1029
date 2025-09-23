@@ -1,5 +1,20 @@
-USANDO AVX:
+///////////////////////////////////
 
+Resultados do T1:
+
+1024x1024:
+scalar_matrix_mult: 10.397000 ms
+matrix_matrix_mult: 5338.442871 ms
+Overall time: 5387.414062 ms
+
+2048x2048:
+scalar_matrix_mult: 58.757019 ms
+matrix_matrix_mult: 47413.628906 ms
+Overall time: 47531.421875 ms
+
+///////////////////////////////////
+
+T2 - AVX:
 
 1024x1024:
 
