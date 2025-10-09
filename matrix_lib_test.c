@@ -1,4 +1,4 @@
-//INF-1029 - Trabalho 2
+//INF-1029 - Trabalho 3
 //Diego Miranda - 2210996
 //Felipe Cancella - 2210487
 #include "matrix_lib.h"
@@ -23,8 +23,8 @@ void save_matrix(char* filename, struct matrix* m){
 }
 
 int main (int argc, char* argv[]){
-    if (argc != 10){
-        printf("Erro na execução do arquivo: matrix_lib_test <scalar> <heightA> <widthB> <heightB> <widthB> <floatsFile1> <floatsFile2> <resultFile1> <resultFile2>");
+    if (argc != 11){
+        printf("Erro na execução do arquivo: matrix_lib_test <scalar> <heightA> <widthB> <heightB> <widthB> <numThreads> <floatsFile1> <floatsFile2> <resultFile1> <resultFile2>");
     }
     
     struct timeval start1, start2, stop1, stop2, overall_t1, overall_t2;
@@ -35,10 +35,13 @@ int main (int argc, char* argv[]){
     int widthA = atoi(argv[3]);
     int heightB = atoi(argv[4]);
     int widthB = atoi(argv[5]);
-    char* floats1 = argv[6]; 
-    char* floats2 = argv[7];
-    char* result1 = argv[8];
-    char* result2 = argv[9];
+    int paramThreads = atoi(argv[6]);
+    char* floats1 = argv[7]; 
+    char* floats2 = argv[8];
+    char* result1 = argv[9];
+    char* result2 = argv[10];
+
+    set_number_threads(paramThreads);
 
     if (widthA != heightB)
         return 1;
@@ -134,5 +137,6 @@ int main (int argc, char* argv[]){
     printf("matrix_matrix_mult: %f ms\n", timedifference_msec(start2, stop2));
     gettimeofday(&overall_t2, NULL);
     printf("Overall time: %f ms\n", timedifference_msec(overall_t1, overall_t2));
-    
+
+    return 0;
 }
