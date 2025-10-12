@@ -4,7 +4,7 @@ Felipe Cancella - 2210487
 
 ///////////////////////////////////
 
-Resultados do T1:
+Resultados do T2:
 
 1024x1024:
 scalar_matrix_mult: 150.113998 ms
