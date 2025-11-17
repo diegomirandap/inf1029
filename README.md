@@ -58,3 +58,18 @@ gcc -std=c11 -pthread -mfma -o matrix_lib_test matrix_lib_test.c matrix_lib.c ti
 ./create_matrix 2048 2048 floats_256_2.0f.dat
 ./create_matrix 2048 2048 floats_256_5.0f.dat
 ./matrix_lib_test 5.0 2048 2048 2048 2048 4 "floats_256_2.0f.dat" "floats_256_5.0f.dat" "result1.dat" "result2.dat"
+
+
+Trabalho 4:
+./matrix_lib_test <scalar> <heightA> <widthA> <heightB> <widthB> <threads/blk> <max_blks> <max_mem_MiB> <floatsFile1> <floatsFile2> <resultFile1> <resultFile2>
+
+Sequência de exibição segundo o roteiro:
+gcc -o create_matrix create_matrix.c
+./create_matrix 1024 1024 floats_256_2.0f.dat
+./create_matrix 1024 1024 floats_256_5.0f.dat
+nvcc -o matrix_lib_test matrix_lib_test.cu matrix_lib.cu timer.c
+./matrix_lib_test 5.0 1024 1024 1024 1024 256 4096 1024 floats_256_2.0f.dat floats_256_5.0f.dat result1.dat result2.dat
+
+./create_matrix 2048 2048 floats_256_2.0f.dat
+./create_matrix 2048 2048 floats_256_5.0f.dat
+./matrix_lib_test 5.0 2048 2048 2048 2048 256 4096 1024 floats_256_2.0f.dat floats_256_5.0f.dat result1.dat result2.dat
